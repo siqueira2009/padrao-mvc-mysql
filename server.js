@@ -16,7 +16,7 @@ app.use(cors()); // Permite ou bloqueia que certos domínios peçam recursos
 app.use(express.json()); // Ativa a leitura do body em formato de JSON
 
 // Direciona as rotas para os routes
-app.use("/usuarios", users);
+app.use("/", users);
 
 // Caso não exista a rota, retorna erro 404 com mensagem
 app.use((req, res) =>  res.status(404).json({message: `GET ${req.originalUrl} does not exist.`}));
